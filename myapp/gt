@@ -1,0 +1,10 @@
+#!/bin/bash
+#
+echo updating git
+#
+git add -A
+
+git commit -m "sql"
+
+git push -f git@heroku.com:kwoodall.git
+#
