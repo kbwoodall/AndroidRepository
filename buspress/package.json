@@ -1,0 +1,25 @@
+{
+  "name": "node-example",
+  "version": "0.0.1",
+  "dependencies": {
+    "pg": "0.6.15",
+    "socket.io": "0.9.16",
+    "underscore": "1.5.2",
+    "backbone": "1.0.0",
+    "cloudinary": "1.0.5",
+    "client-http": "0.0.5",
+    "request": "2.27.0",
+    "node-localstorage": "0.3.4",
+    "node-simple-router": "0.4.8-1",
+    "node-fs": "0.1.7",
+    "img64": "0.3.0",
+    "ejs": "0.8.5",
+    "base64-stream": "0.1.2",
+    "password-hash": "1.2.1",
+    "express": "3.1.x"
+  },
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.2.x"
+  }
+}
