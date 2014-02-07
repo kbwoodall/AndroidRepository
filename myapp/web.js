@@ -673,8 +673,9 @@ client.connect(function(err) {
          //response.send(conString);
 });
 //-------------------------------------------------------------------------------------------
-app.get('/getnodesql/:id', function(request, response)  {
-  var p = request.params.id;
+//app.get('/getnodesql/:id', function(request, response)  {
+app.get('/getnodesql', function(request, response)  {
+  //var p = request.params.id;
   var str = "";
 
   var conString = "postgres://wmapqujuisnnra:IWUsYseUZy5cjLIQoUliu18AJr@ec2-54-221-240-24.compute-1.amazonaws.com:5432/d3ssb1qo6p2d8j";
