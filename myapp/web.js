@@ -454,7 +454,8 @@ app.post('/insertmytable', function(request, response)  {
      );
 });
 //-------------------------------------------------------------------------------------------
-app.get('/getlastimage/:id', function(request, response)  {
+//app.get('/getlastimage/:id', function(request, response)  {
+app.get('/getlastimage', function(request, response)  {
       cloudinary.api.resources(function(result) {
 
            var currentImage = " "; 
@@ -506,9 +507,10 @@ app.get('/getimages', function(request, response)  {
      );
 });
 //-------------------------------------------------------------------------------------------
-app.get('/getfiles/:id', function(request, response)  {
-  var p = request.params.id;
-  console.log("PARAM " + p);
+//app.get('/getfiles/:id', function(request, response)  {
+app.get('/getfiles', function(request, response)  {
+  //var p = request.params.id;
+  //console.log("PARAM " + p);
   var fil = "<b>Listing of raw Cloudinary files</b>";
 
       var currentFile = "none available"; 
