@@ -1,0 +1,6 @@
+#!/bin/bash
+
+curl -X POS -H "Content-Type: application/json" -d '{"name":"Joe"}' http://immense-reef-2061.heroku.com/sendToCloud
+
+echo 'finished';
+
