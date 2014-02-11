@@ -273,6 +273,33 @@ fs.exists(fileName, function(exists) {
 
 });
 //-------------------------------------------------------------------------------------------
+app.get('/geturls', function(request, response)  {
+
+    var lst = "getimage" + '<br>' +   
+    "geteclipse" + '<br>' +   
+    "getsql" + '<br>' +   
+    "gettext" + '<br>' +   
+    "sendjson" + '<br>' +   
+    "getjson" + '<br>' +   
+    "sendtext" + '<br>' +   
+    "geturl" + '<br>' +   
+    "sendimage" + '<br>' +   
+    "insertmytable" + '<br>' +   
+    "getlastimage" + '<br>' +   
+    "getimages" + '<br>' +   
+    "getfiles" + '<br>' +   
+    "getimagejson" + '<br>' +   
+    "getenowsql" + '<br>' +   
+    "getenodesql" + '<br>' +   
+    "insertmytable" + '<br>' +   
+    "insertenodesql" + '<br>' +   
+    "deletenodesql" + '<br>' +   
+    "updatenodesql" + '<br>' ;   
+
+   response.send(lst);
+
+});
+//-------------------------------------------------------------------------------------------
 app.get('/geturl/:id', function(request, response)  {
   //console.log( 'The area of a circle of radius 4 is ' + result); 
 
@@ -454,8 +481,7 @@ app.post('/insertmytable', function(request, response)  {
      );
 });
 //-------------------------------------------------------------------------------------------
-//app.get('/getlastimage/:id', function(request, response)  {
-app.get('/getlastimage', function(request, response)  {
+app.get('/getlastimage/:id', function(request, response)  {
       cloudinary.api.resources(function(result) {
 
            var currentImage = " "; 
@@ -507,10 +533,9 @@ app.get('/getimages', function(request, response)  {
      );
 });
 //-------------------------------------------------------------------------------------------
-//app.get('/getfiles/:id', function(request, response)  {
-app.get('/getfiles', function(request, response)  {
-  //var p = request.params.id;
-  //console.log("PARAM " + p);
+app.get('/getfiles/:id', function(request, response)  {
+  var p = request.params.id;
+  console.log("PARAM " + p);
   var fil = "<b>Listing of raw Cloudinary files</b>";
 
       var currentFile = "none available"; 
@@ -604,8 +629,8 @@ app.get('/getimagejson/:id', function(request, response)  {
   var p = request.params.id;
   console.log("PARAM " + p);
   var msg = "<ul> <li>getting image </li> </ul>";
-
   var lastmsg="You entered: " + p;
+
   msg = msg + "<br>" + lastmsg;
   var dimg = cloudinary.image("logo_lpg70n.png")
   msg = msg + "<br><br>" + dimg;
@@ -651,8 +676,9 @@ function getDateTime() {
     return ts;
 }
 //-------------------------------------------------------------------------------------------
-app.get('/getnowsql/:id', function(request, response)  {
-  var p = request.params.id;
+//app.get('/getnowsql/:id', function(request, response)  {
+app.get('/getnowsql', function(request, response)  {
+  //var p = request.params.id;
 
 var conString = "postgres://wmapqujuisnnra:IWUsYseUZy5cjLIQoUliu18AJr@ec2-54-221-240-24.compute-1.amazonaws.com:5432/d3ssb1qo6p2d8j";
 
